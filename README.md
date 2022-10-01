@@ -14,6 +14,8 @@ The changes made:
 * No circular background for close icon.
 * Hover-over for window actions (minimize, maximize etc.) will invert the background and foreground colours with a square background.
   * Clicking an action icon will change the background from square to a circle.
+
+If you want the window icons to be double size, then uncomment the section in the CSS file at the end which enables that.
   
 ## Screenshots:
 

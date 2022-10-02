@@ -10,13 +10,15 @@ headerbar {
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
-headerbar:not(:backdrop) {
+headerbar:not(:backdrop),
+headerbar:not(:backdrop) button:not(:backdrop) {
     color: @active_window_fg_color;
     background-color: @active_window_bg_color;
     border-color: @active_window_bg_color;
 }
 
-headerbar:backdrop {
+headerbar:backdrop,
+headerbar:backdrop button:backdrop {
     color: @inactive_window_fg_color;
     background-color: @inactive_window_bg_color;
     border-color: @inactive_window_bg_color;
@@ -42,6 +44,11 @@ headerbar button.titlebutton:hover:not(:backdrop){
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.8, to(@active_window_fg_color), to(transparent));
 }
 
+headerbar button:hover:not(:backdrop){
+    color: @active_window_bg_color;
+    background-color: @active_window_fg_color;
+}
+
 /* Clicking an icon will change the hover representation from circle to square. */
 headerbar button.titlebutton:active:not(:backdrop) {
     color: @active_window_bg_color;
@@ -54,6 +61,11 @@ headerbar button.titlebutton:hover:backdrop {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.8, to(@inactive_window_fg_color), to(transparent));
 }
 
+headerbar button:hover:backdrop {
+    color: @inactive_window_bg_color;
+    background-color: @inactive_window_fg_color;
+}
+
 /* Clicking an icon will change the hover representation from circle to square. */
 headerbar button.titlebutton:active:backdrop {
     color: @inactive_window_bg_color;
@@ -61,13 +73,13 @@ headerbar button.titlebutton:active:backdrop {
 }
 
 /* Uncomment this section to increase the size of the icons. */
-
 /*
 headerbar {
     min-height: 36px;
 }
 
-headerbar button.titlebutton {
+headerbar button.titlebutton,
+headerbar button.titlebutton image {
     min-width: 28px;
     -gtk-icon-transform: scale(1.5);
     background-size: 28px 28px;

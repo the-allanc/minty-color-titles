@@ -60,12 +60,16 @@ headerbar button.titlebutton:active:backdrop {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@inactive_window_fg_color), to(transparent));
 }
 
-/* Uncomment this section to double the size of the icons. */
+/* Uncomment this section to increase the size of the icons. */
+
 /*
-headerbar button.titlebutton {
+headerbar {
     min-height: 36px;
-    min-width: 36px;
-    -gtk-icon-transform: scale(2);
-    background-size: 36px 36px;
+}
+
+headerbar button.titlebutton {
+    min-width: 28px;
+    -gtk-icon-transform: scale(1.5);
+    background-size: 28px 28px;
 }
 */

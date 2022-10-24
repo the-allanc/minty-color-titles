@@ -14,13 +14,17 @@ headerbar:not(:backdrop),
 headerbar:not(:backdrop) button:not(:backdrop) {
     color: @active_window_fg_color;
     background-color: @active_window_bg_color;
+    background-image: none;
     border-color: @active_window_bg_color;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 headerbar:backdrop,
 headerbar:backdrop button:backdrop {
     color: @inactive_window_fg_color;
     background-color: @inactive_window_bg_color;
+    background-image: none;
     border-color: @inactive_window_bg_color;
 }
 

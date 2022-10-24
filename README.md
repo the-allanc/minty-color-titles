@@ -1,7 +1,7 @@
 # minty-color-titles
 This repository contains a gtk.css file which should provide coloured window headers for Linux Mint 21 Cinnamon (it may work with other DE's and other distros).
 
-It's primarily configured to be integrated with the Mint-Y theme (or any of its colour variants). The foreground and background colours for window headers (both active and inactive) can be manually overridden by modifying the defined colours at the top of the file. It's inspired by the [OneColor theme](https://www.gnome-look.org/p/1006952).
+It's primarily configured to be integrated with both the Mint-X and Mint-Y themes (or any of their colour variants). The foreground and background colours for window headers (both active and inactive) can be manually overridden by modifying the defined colours at the top of the file. It's inspired by the [OneColor theme](https://www.gnome-look.org/p/1006952).
 
 Applications which use [CSD](https://wiki.gnome.org/Initiatives/CSD) and don't have the standard window title should also be themed correctly (see the screenshots below).
 

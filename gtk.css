@@ -7,7 +7,7 @@
 @define-color inactive_window_bg_color @theme_unfocused_bg_color;
 
 headerbar {
-    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 headerbar:not(:backdrop),

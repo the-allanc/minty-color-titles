@@ -29,10 +29,15 @@ headerbar:backdrop button:backdrop {
 }
 
 
-/* Disables the circle image around the close button. */
-headerbar button.titlebutton.close:not(:hover) {
+/* Disables the circle image around the close button,
+   as well the "shadow" image of inactive window icons
+   for Mint-Y-Legacy themes.
+ */
+headerbar button.titlebutton,
+.titlebar button.titlebutton {
     background-image: none;
 }
+
 
 headerbar button.titlebutton:not(:backdrop) {
     color: @active_window_fg_color;
@@ -76,6 +81,15 @@ headerbar button.titlebutton:active:backdrop {
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(@inactive_window_fg_color), to(transparent));
 }
 
+/* Prevent dark squares appearing around unfocused
+   OSD app icons in new Mint-Y themes. */
+.titlebar button.titlebutton.maximize:hover,
+.titlebar button.titlebutton.minimize:hover,
+.titlebar button.titlebutton.close:hover {
+    background-image: none;
+}
+
+
 /* Uncomment this section to increase the size of the icons. */
 /*
 headerbar {
@@ -84,7 +98,8 @@ headerbar {
 
 headerbar button.titlebutton,
 headerbar button.titlebutton image {
-    min-width: 28px;
+    min-width: 30px;
+    min-height: 30px;
     -gtk-icon-transform: scale(1.5);
     background-size: 28px 28px;
 }
